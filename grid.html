@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <title>css-grid-2-challenge</title>
+    <style>
+        body {
+            background-color: #000428;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 20px;
+            grid-auto-rows: minmax(100px, auto);
+            grid-auto-columns: minmax(50px, auto);
+        }
+
+        .items {
+            background-color: lightgreen;
+            border: 3px darkorange solid;
+            border-radius: 3px;
+        }
+
+        #item-2 {
+            background: #536976;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #292E49, #536976);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #292E49, #536976);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+
+        #item-1 {
+            background: #000428;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #004e92, #000428);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #004e92, #000428);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            grid-row-start: 1;
+            grid-row-end: 6;
+        }
+
+        #item-1 nav ul li a {
+            list-style: none;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 900;
+            font-size: x-large;
+        }
+
+        #item-1 nav ul li {
+            list-style: none;
+            padding: 18%;
+        }
+
+        p {
+            font-family: 'RocknRoll One', sans-serif;
+            font-weight: bolder;
+        }
+
+        h1{
+            margin-left: 40%;
+        }
+
+        h2 {
+            margin-left: 0px;
+            padding-left: 36%;
+            color: aqua;
+            background-color: #3383b8;
+        }
+
+        h3 {
+            margin-left: 40%;
+        }
+
+        h4 {
+            color: rgb(2, 9, 15);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            clip-path: circle(50% at 50% 50%);
+            margin-left: 60%;
+        }
+
+
+
+        #item-3 {
+            background: #1FA2FF;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            grid-row-start: 2;
+            grid-row-end: 5;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+
+        #item-4 {
+            background-color: #28ee0e;
+            grid-row-start: 2;
+            grid-row-end: 5;
+            grid-column-start: 4;
+            grid-column-end: 5;
+        }
+
+        header {
+            color: #f6ffeb;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #item-5 {
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 2;
+            grid-column-end: 5;
+        }
+
+        .item-1-container {
+            display: grid;
+        }
+
+        .nested-item {
+            background-color: #dddddd;
+            border: 3px #03080a solid;
+            border-radius: 4px;
+        }
+
+        #ns1 {
+            grid-row-start: 4;
+            grid-row-end: 6;
+        }
+
+        #ns2 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .nested-item a {
+            text-decoration: none;
+            color: #f6ffeb;
+        }
+
+        .nested-item a:hover {
+            background-color: #055dcf;
+            color: #fff;
+        }
+
+
+
+        .adbtn {
+            border-radius: 4px;
+            padding: 8px;
+            margin-right: 20%;
+            background-color: #1a73e8;
+            color: #fff;
+        }
+
+        footer a:hover {
+            color: rgb(0, 0, 0);
+            font-size: larger;
+            font-family: sans-serif;
+            font-weight: 900;
+            text-decoration: none;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        #item-5{
+            background: #FF512F;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items" id="item-1">
+            <div>
+                <h2>Nav</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">authors</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="items" id="item-2">
+            <h1>
+                <header>header</header>
+            </h1>
+        </div>
+        <div class="items" id="item-3">
+            <h1>Article</h1>
+            <p>
+                Peak performance experts say things like, “You should focus. You need to eliminate the distractions.
+                Commit to one thing and become great at that thing.”
+                This is good advice. The more I study successful people from all walks of life—artists, athletes,
+                entrepreneurs, scientists—the more I believe focus is a core factor of success.
+                But there is a problem with this advice too.
+                Of the many options in front of you, how do you know what to focus on? How do you know where to direct
+                your energy and attention? How do you determine the one thing that you should commit to doing?
+                I don’t claim to have all the answers, but let me share what I’ve learned so far.
+            </p>
+        </div>
+        <div class="items item-1-container" id="item-4">
+            <div class="nested-item" id="ns1">
+                <h4>learn web development on apna college</h4>
+                <img src="adwd.jpg" alt="wd">
+                <a href="www.apnikaksha.com" class="adbtn">learn more</a>
+            </div>
+            <div class="nested-item" id="ns2">
+                <h4>learn 11th and 12th subjects on apni kaksha</h4>
+                <img src="ads12.jpg" alt="ads">
+                <a href="www.apnikaksha.com" class="adbtn">learn more</a>
+            </div>
+        </div>
+        <div class="items" id="item-5">
+            <h1>footer</h1>
+            <footer>
+                <a href="#" class="fff">FAQ</a> &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" class="fff">Contact Us</a>&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" class="fff">Terms Of use</a>&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" class="fff">Privacy Policy</a>&nbsp; |&nbsp;&nbsp;&nbsp;
+                <a href="#" class="fff">&copy; 2020 Soham Yashwant Jangave</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
